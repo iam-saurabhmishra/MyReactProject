@@ -78,8 +78,8 @@ const TextForm = (props) => {
 
             <div className="container">
                 <h2 className='text-warning-emphasis'>Text Summary</h2>
-                <p style={{color:"green"}}>{text.split(" ").length} words , {text.length} characters</p>
-                <p style={{color:"green"}}>{.008 * text.split(" ").length} will be the average read time</p>
+                <p style={{color:"green"}}>{text.split(/\s+/).filter((e)=>e.length>0).length} words , {text.length} characters</p>
+                <p style={{color:"green"}}>{.008 * text.split(/\s+/).filter((e)=>e.length>0).length} will be the average read time</p>
             </div>
         </>
 
